@@ -1,0 +1,11 @@
+node_modules
+.wrangler
+.env
+.dev.vars
+src
+wrangler.jsonc
+.git
+*.log
+.DS_Store
+playwright/.cache
+test-results

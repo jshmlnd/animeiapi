@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "animeiapi",
+  "main": "src/worker.js",
+  "compatibility_date": "2025-01-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "kv_namespaces": [
+    {
+      "binding": "CACHE",
+      "id": "ab74550082d24e91a9bfe4ae9f061aa4"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}

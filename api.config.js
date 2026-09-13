@@ -194,7 +194,7 @@ module.exports = {
     // ── Streaming sources (Miruro pipe) ──────────────────────────────
     {
       method: 'GET',
-      path: '/watch/:provider/:anilistId/:category/:slug',
+      path: '/api/:provider/:anilistId/:category/:slug',
       kind: 'pipe',
       buildPayload: (opts, base) => {
         // Two-step: fetch episodes to resolve slug → episodeId, then sources.
@@ -232,7 +232,7 @@ module.exports = {
         };
         return helpers.pipe(base, sourcesPayload);
       },
-      description: 'Streaming sources – GET /watch/kiwi/20/sub/<slug>',
+      description: 'Streaming sources – GET /api/kiwi/20/sub/<slug>',
     },
   ],
 };

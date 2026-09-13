@@ -442,12 +442,17 @@ export default {
           fn: (m) => handlers.watch({ provider: m[1], anilistId: m[2], category: m[3], slug: m[4] }, env, bases),
           ttl: 3600,
         },
+        {
+          re: /^\/api\/stream\/([^/]+)\/(\d+)\/([^/]+)\/([^/]+)$/,
+          fn: (m) => handlers.watch({ provider: m[1], anilistId: m[2], category: m[3], slug: m[4] }, env, bases),
+          ttl: 3600,
+        },
         { re: /^\/health$/, fn: () => ({ status: 'ok' }), ttl: 0 },
         {
           re: /^\/$/,
           fn: () => ({
             name: 'animeiAPI (Worker)',
-            endpoints: ['/search', '/trending', '/popular', '/recent', '/info/:id', '/episodes/:id', '/watch/:provider/:anilistId/:category/:slug', '/hls/:encodedUrl', '/health'],
+            endpoints: ['/search', '/trending', '/popular', '/recent', '/info/:id', '/episodes/:id', '/watch/:provider/:anilistId/:category/:slug', '/api/stream/:provider/:anilistId/:category/:slug', '/hls/:encodedUrl', '/health'],
           }),
           ttl: 0,
         },

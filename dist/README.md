@@ -1,0 +1,1 @@
+This folder contains the built output assets for the worker "animeiapi" generated at 2026-09-13T08:39:03.026Z.

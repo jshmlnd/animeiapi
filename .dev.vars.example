@@ -1,0 +1,7 @@
+# Local dev secrets – copy to .dev.vars (real file, gitignored) and edit.
+# Used by `npm run dev:worker` (wrangler dev).
+FLARESOLVERR_URL=http://localhost:8191
+FLARESOLVERR_TIMEOUT=60000
+# SOURCE_URL=https://www.miruro.tv   # optional: override streaming mirror (comma-separated)
+# HLS_REFERER=https://www.miruro.tv  # optional: Referer sent to HLS hosts (default: miruro.tv)
+# HLS_ORIGIN=https://you.workers.dev # optional: override proxy self-origin for /hls rewrites

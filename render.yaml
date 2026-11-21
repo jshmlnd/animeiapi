@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: consumet-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile.consumet
+    envVars:
+      - key: NODE_ENV
+        value: PROD
+    plan: free
